@@ -1,29 +1,29 @@
-- name: Copying the Mongo Repo
+- name: Copying MongoDB Repo  
   ansible.builtin.copy:
-    src: mongo.repo
-    dest: /etc/yum.repos.d/mongodb.repo
+    src: mongo.repo 
+    dest: /etc/yum.repos.d/mongodb.repo 
 
-- name: Installing mongoDB
+- name: Installing MongoDB 
   ansible.builtin.package:
-    name: mongodb-org
-    state: present
+    name: mongodb-org 
+    state: present  
 
-- name: Updating the mongodb visibility
+- name: Updating the MongoDB Visibility
   ansible.builtin.replace:
     path: /etc/mongod.conf
     regexp: '127.0.0.1'
     replace: '0.0.0.0' 
 
-- name: Starting the mongodb service
+- name: Starting Mongodb
   ansible.builtin.service:
-    name: monogod
-    state: restarted
+    name: mongod
+    state: restarted          
     enabled: yes
 
-- name: Downloading and Extracting MongoDB schema
-  ansible.built.unarchive:
+- name: Download and extract MongoDB Schema 
+  ansible.builtin.unarchive:
     src: https://github.com/stans-robot-project/mongodb/archive/main.zip
-    dest: /tmp
+    dest: /tmp 
     remote_src: yes
 
 - name: Loading users schema
