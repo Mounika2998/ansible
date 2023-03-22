@@ -6,10 +6,11 @@
     name: nodejs
     state: present
 
-- name: creating the Roboshop user Account
-  anisble.builtin.user:
-    name: "{{APPUSER}}"
+- name: Creating a Roboshop User Account 
+  ansible.builtin.user:
+    name: "{{APPUSER}}" 
     comment: Roboshop User Account
+
 
 - name: Download and extract the component
   ansible.builtin.unarchive:
