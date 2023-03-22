@@ -1,5 +1,6 @@
 - name: Demo on variables
   hosts: all
+  vars_files: demo-vars.yaml
   vars:
     URL: https:google.com
   tasks:
@@ -16,4 +17,11 @@
     - name: Printing the global variable
       ansible.builtin.debug:
         msg : "{{CMD_URL}}" # Using command line variables
+    
+    - name: Printing the variables from a file 
+      ansible.builtin.debug:
+        msg: "{{GAME_LIVES}}"
+        
+    
+
       
