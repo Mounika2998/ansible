@@ -1,6 +1,10 @@
 - name: Demo on variables
   hosts: all
   vars_files: demo-vars.yaml
+  vars_prompt: 
+    - name: PURL  
+      prompt: Enter the purl 
+      private: true
   vars:
     URL: https:google.com
   tasks:
@@ -21,7 +25,21 @@
     - name: Printing the variables from a file 
       ansible.builtin.debug:
         msg: "{{GAME_LIVES}}"
-        
+
+    - name: Printing prompt url  
+      ansible.builtin.debug:
+        msg: "{{PURL}}"
+
+
+
+
+
+
+
+
+# Variable Precendence : 
+# CLI Variables  > Local Variables > Global Variables > File Variables > Prompt Variables 
+
     
 
       
