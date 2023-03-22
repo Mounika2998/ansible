@@ -1,6 +1,6 @@
 -name:play1
 -host:all
 -tasks:
-  name:Printing hello form task1
-  ansible.built.debug:
-    msg:Hello task1
+  -name:Printing hello form task1
+    ansible.built.debug:
+      msg:Hello task1
