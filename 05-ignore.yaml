@@ -11,7 +11,7 @@
 
     - name: Check the user id 
       ansible.builtin.shell: id 
-        register: OUT 
+      register: OUT 
 
     - name: Printing
       ansible.builtin.debug:  
