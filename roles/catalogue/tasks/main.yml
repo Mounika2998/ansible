@@ -2,7 +2,7 @@
   ansible.builtin.shell:  curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash - 
 
 - name: Installing Nodejs
-  ansible.builtin.pacakge:
+  ansible.builtin.package:
     name: nodejs
     state: present
 
