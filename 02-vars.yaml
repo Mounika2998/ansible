@@ -11,4 +11,9 @@
       ansible.builtin.debug:
         msg : "{{URL}}"
       vars:
-        URL: https:local.com
+        URL: https:local.com  # scope of local varaible is in this task only
+
+    - name: Printing the global variable
+      ansible.builtin.debug:
+        msg : "{{CMD_URL}}" # Using command line variables
+      
