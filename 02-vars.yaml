@@ -6,3 +6,9 @@
     - name: Printing the global variable
       ansible.builtin.debug:
         msg : "{{URL}}"
+    
+    - name: Printing the global variable
+      ansible.builtin.debug:
+        msg : "{{URL}}"
+      vars:
+        URL: https:local.com
