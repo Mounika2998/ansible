@@ -1,0 +1,8 @@
+- name: Demo on variables
+  hosts: all
+  vars:
+    URL: https:google.com
+  tasks:
+    - name: Printing the global variable
+      ansible.builtin.debug:
+        msg : "{{URL}}"
