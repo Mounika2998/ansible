@@ -8,6 +8,11 @@
   - name: Printing the output of shell module
     ansible.builtin.debug:
       msg : "{{OUT}}"
+  
+  - name: Printing the shell output using OUT variable
+    ansible.builtin.debug:
+      msg : "{{OUT.stdout}}"
+
 
 
 
