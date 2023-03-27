@@ -22,8 +22,3 @@
   ansible.builtin.include_role:
     name: common 
     tasks_from: config-svc
-
-
-- name: Generating the nodemodules
-  community.general.npm:
-    path: /home/{{APPUSER}}/{{COMPONENT}}/

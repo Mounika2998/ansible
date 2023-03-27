@@ -1,10 +1,10 @@
 [frontend] 
 frontend.roboshop.internal
 
-[mongodb] 
-mongodb.roboshop.internal
+[mongodb]
+mongodb.roboshop.internal 
 
-[catalogue] 
+[catalogue]
 catalogue.roboshop.internal
 
 [redis]
@@ -13,5 +13,17 @@ redis.roboshop.internal
 [user]
 user.roboshop.internal
 
+[cart]
+cart.roboshop.internal
 
+[mysql]
+mysql.roboshop.internal
 
+[shipping]
+shipping.roboshop.internal
+
+[rabbitmq]
+rabbitmq.roboshop.internal
+
+[payment]
+payment.roboshop.internal
