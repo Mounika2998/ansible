@@ -19,7 +19,7 @@
 
 - name: Installing nodejs packages
   community.general.npm:
-    path: /home/{{APPUSER}}/{{COMPONENT}}/
+    path: /home/{{APPUSER}}/{{COMPONENT}}
 
 # Call Configure Service Role
 - name: Calling Config Service Role From Common
