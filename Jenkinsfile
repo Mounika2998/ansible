@@ -4,17 +4,15 @@ pipeline {
         SSH_CREDENTIALS = credentials('SSH_CRED') 
     }    
     stages {
+    
+        stage('Performing Ansible Dry Run') {     // This stage I want to run it against a PR Only
         
-        stage('Performing Lint Check') {
             steps {
                 sh "env"
-                sh "echo This step should run against non-main branches only"
-                 sh "ansible-playbook robot-dryrun.yaml -e COMPONENT=mongodb -e ansible_user=${SSH_CREDENTIALS_USR} -e ansible_password=${SSH_CREDENTIALS_PSW} -e ENV=qa"
-                sh "echo PERFORMING LINT CHECKSS"
+                sh "ansible-playbook robot-dryrun.yaml -e COMPONENT=mongodb -e ansible_user=${SSH_CREDENTIALS_USR} -e ansible_password=${SSH_CREDENTIALS_PSW} -e ENV=qa"
             }
         }
 
+        
     }
-
-
 }
