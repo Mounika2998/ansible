@@ -1,16 +1,19 @@
-pipeline{
-    agent{ label 'ws'}
+pipeline {
+    agent { label 'ws' }
     environment { 
         SSH_CREDENTIALS = credentials('SSH_CRED') 
-    }  
-
-    stages{
-        stage('Performing Ansible Dry Run'){
-            steps{
-
-                sh "ansible-playbook robot-dryrun.yaml -e COMPONENT=mongodb -e ansible_user=${SSH_CREDENTIALS_USR} -e ansible_password=${SSH_CREDENTIALS_PSW} -e ENV=qa"
-
+    }    
+    stages {
+        
+        stage('Performing Lint Check') {
+            steps {
+                sh "env"
+                sh "echo This step should run against non-main branches only"
+                sh "echo PERFORMING LINT CHECKSS"
             }
         }
+
     }
+
+
 }
