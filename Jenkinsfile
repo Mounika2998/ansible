@@ -9,6 +9,7 @@ pipeline {
         
             steps {
                 sh "env"
+                sh "I am from feature branch"
                 sh "ansible-playbook robot-dryrun.yaml -e COMPONENT=mongodb -e ansible_user=${SSH_CREDENTIALS_USR} -e ansible_password=${SSH_CREDENTIALS_PSW} -e ENV=qa"
             }
         }
