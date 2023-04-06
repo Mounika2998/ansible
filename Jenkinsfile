@@ -14,6 +14,16 @@ pipeline {
             }
         }
 
+     stage('Promotion To Prod Branch') {       // This stage will run only against the main branch
+            when { branch 'main' }
+            steps {
+                sh "env"
+                sh "echo main - PROMOTING To PROD"
+            }
+        }
+
+     
+
         
     }
 }
