@@ -8,6 +8,7 @@ pipeline {
     stage('Promotion To Prod Branch') {       // This stage will run only against the main branch
             steps {
                 sh "env"
+                sh "I am from Main branch"
                 sh "echo main - PROMOTING To PROD"
             }
         }
