@@ -9,7 +9,7 @@ pipeline {
             steps {
                 sh "env"
                 sh "I am main branch"
-                sh "echo main - PROMOTING To PROD"
+                sh "main - PROMOTING To PROD"
             }
         }
 
