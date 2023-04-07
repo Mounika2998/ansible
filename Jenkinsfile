@@ -26,7 +26,7 @@ pipeline {
             when { branch 'main' }
             steps {
                 sh "env"
-                sh "echo main - PROMOTING To PROD"
+                sh "echo main - PROMOTING To the PROD"
             }
         }
     }
