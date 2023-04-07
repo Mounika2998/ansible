@@ -13,13 +13,7 @@ pipeline {
             }
         }
 
-    stage('Promotion To Feature Branch') {       // This stage will run only against the main branch
-            steps {
-                sh "env"
-                sh "I am main branch"
-                sh "echo main - PROMOTING To PR"
-            }
-        }
+    
     }
 
 }
